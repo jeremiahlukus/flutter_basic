@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './pages/product_page.dart';
 
 class Products extends StatelessWidget {
-  final List<String> products;
+  final List<Map<String, String>>  products;
 
   Products(this.products) {
     print("Products Widget Constructor");
@@ -13,8 +13,8 @@ class Products extends StatelessWidget {
       color: Color(getColorHexFromStr("#5fd7fe")),
       child: Column(
         children: <Widget>[
-          Image.asset('assets/food.jpg'),
-          Text(products[index]),
+          Image.asset(products[index]['imageUrl']),
+          Text(products[index]['title']),
           ButtonBar(
             children: <Widget>[
               FlatButton(
@@ -23,7 +23,7 @@ class Products extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => ProductPage()));
+                          builder: (BuildContext context) => ProductPage(products[index]['title'], products[index]['imageUrl'])));
                 },
               )
             ],

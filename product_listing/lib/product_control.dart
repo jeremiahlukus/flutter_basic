@@ -10,7 +10,7 @@ class ProductControl extends StatelessWidget {
     return FloatingActionButton(
         backgroundColor: Theme.of(context).primaryColor,
         onPressed: () {
-          addProduct('New Product');
+          addProduct({'title': 'Chocolate', 'imageUrl': 'assets/food.jpg'});
         },
         child: Icon(Icons.add))
       ;
