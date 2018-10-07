@@ -26,7 +26,7 @@ class _MyApp extends State<MyApp> {
         appBar: AppBar(
           title: Text('EasyList'),
         ),
-        body: ProductManager('Something'),
+        body: ProductManager(),
       ),
     );
   }
