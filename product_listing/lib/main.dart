@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import './product_manager.dart';
+import './pages/home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,12 +22,7 @@ class _MyApp extends State<MyApp> {
           brightness: Brightness.light,
           primarySwatch: Colors.blueGrey,
           accentColor: Colors.blueAccent),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('EasyList'),
-        ),
-        body: ProductManager(),
-      ),
+      home: HomePage(),
     );
   }
 }
