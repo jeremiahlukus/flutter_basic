@@ -18,7 +18,7 @@ class ProductPage extends StatelessWidget {
             Image.asset(imageUrl),
             Container(padding: EdgeInsets.all(10.0), child: Text(title)),
             Container(padding: EdgeInsets.all(10.0), child: FlatButton(
-                onPressed: () => Navigator.pop(context), child: Text("Back"), color: Theme.of(context).accentColor,))
+                onPressed: () => Navigator.pop(context, true), child: Text("Delete"), color: Theme.of(context).accentColor,))
           ],
         ),
       );
