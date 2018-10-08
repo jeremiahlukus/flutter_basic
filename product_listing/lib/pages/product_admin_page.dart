@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
-import '../product_manager.dart';
-import './product_admin_page.dart';
 
-class HomePage extends StatelessWidget {
+import 'package:flutter/material.dart';
+import './home_page.dart';
+
+class ProductAdminPage extends StatelessWidget {
 
   Widget _addDrawer(BuildContext context) {
     return Drawer(
@@ -13,12 +13,12 @@ class HomePage extends StatelessWidget {
             automaticallyImplyLeading: false,
           ),
           ListTile(
-            title: Text("Manage Products"),
+            title: Text("View All Products"),
             onTap: () {
               Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                      builder: (BuildContext context) => ProductAdminPage()));
+                      builder: (BuildContext context) => HomePage()));
             },
           )
         ],
@@ -28,13 +28,12 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       drawer: _addDrawer(context),
       appBar: AppBar(
-        title: Text('EasyList'),
+        title: Text('Manage Product'),
       ),
-      body: ProductManager(),
+      body: Center(child: Text("Magnage")),
     );
   }
 }

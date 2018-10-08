@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import './pages/home_page.dart';
+import './pages/login_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,7 +22,7 @@ class _MyApp extends State<MyApp> {
           brightness: Brightness.light,
           primarySwatch: Colors.blueGrey,
           accentColor: Colors.blueAccent),
-      home: HomePage(),
+      home: LoginPage(),
     );
   }
 }
